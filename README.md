@@ -1,3 +1,2 @@
 # algorithm
-Algorithm Solutions by gusalseh
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+Algorithm Solutions by gusalseh and powered by Baekjoon Online Judge
