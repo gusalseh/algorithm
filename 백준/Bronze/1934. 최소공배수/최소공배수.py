@@ -1,5 +1,6 @@
 N = int(input())
 lines = []
+
 for _ in range(N):
     nums=list(map(int,input().split()))
     lines.append(nums)
