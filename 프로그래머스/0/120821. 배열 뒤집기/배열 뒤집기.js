@@ -1,5 +1,7 @@
 function solution(num_list) {
     let answer = [];
-    answer = num_list.reverse()
+    for (i=num_list.length-1;i>-1;i--) {
+        answer.push(num_list[i])
+    }
     return answer;
 }
