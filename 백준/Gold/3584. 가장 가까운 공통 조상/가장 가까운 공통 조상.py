@@ -1,11 +1,3 @@
-def path_to_root(node, parent):
-    path = []
-    while node != -1:
-        path.append(node)
-        node = parent[node]
-    return path
-
-
 T = int(input())
 result = []
 
@@ -20,15 +12,17 @@ for _ in range(T):
 
     target_node1, target_node2 = map(int, input().split())
 
-    path1 = path_to_root(target_node1, parent)
-    path2 = path_to_root(target_node2, parent)
-
+    ancestors1 = set()
+    while target_node1 != -1:
+        ancestors1.add(target_node1)
+        target_node1 = parent[target_node1]
+        
     common_node = -1
-    path1_set = set(path1)
-    for node in path2:
-        if node in path1_set:
-            common_node = node
+    while target_node2 != -1:
+        if target_node2 in ancestors1:
+            common_node = target_node2
             break
+        target_node2 = parent[target_node2]
 
     result.append(common_node)
 
